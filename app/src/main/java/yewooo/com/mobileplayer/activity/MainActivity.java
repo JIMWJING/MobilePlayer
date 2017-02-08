@@ -1,14 +1,16 @@
-package yewooo.com.mobileplayer;
+package yewooo.com.mobileplayer.activity;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashActivity extends Activity {
+import yewooo.com.mobileplayer.R;
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_main);
     }
 }

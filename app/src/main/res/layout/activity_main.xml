@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE RelativeLayout [<!ELEMENT RelativeLayout (FrameLayout|RadioGroup)*><!ATTLIST RelativeLayoutxmlns:android CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT FrameLayout (#PCDATA)><!ATTLIST FrameLayoutandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_weight CDATA #REQUIRED><!ELEMENT RadioGroup (RadioButton)*><!ATTLIST RadioGroupandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:orientation CDATA #REQUIRED><!ELEMENT RadioButton (#PCDATA)><!ATTLIST RadioButtonandroid:id CDATA #REQUIREDandroid:text CDATA #REQUIREDandroid:drawableTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIRED>]>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yewooo.com.mobileplayer.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" ></FrameLayout>
+
+    <RadioGroup
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#22000000">
+
+        <RadioButton
+            android:id="@+id/rb_video"
+            android:text="本地视频"
+            android:drawableTop="@drawable/rb_video_draw_selector"
+            style="@style/bottom_tag_style" />
+
+        <RadioButton
+            android:id="@+id/rb_audio"
+            android:text="本地音乐"
+            android:drawableTop="@drawable/rb_audio_draw_selector"
+            style="@style/bottom_tag_style" />
+
+        <RadioButton
+            android:id="@+id/rb_net_video"
+            android:text="网络视频"
+            android:drawableTop="@drawable/rb_net_video_draw_selector"
+            style="@style/bottom_tag_style" />
+
+        <RadioButton
+            android:id="@+id/rb_net_audio"
+            android:text="网络音乐"
+            android:drawableTop="@drawable/rb_net_audio_draw_selector"
+            style="@style/bottom_tag_style" />
+
+    </RadioGroup>
+
+</RelativeLayout>
