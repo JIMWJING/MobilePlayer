@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE RelativeLayout [<!ELEMENT RelativeLayout (FrameLayout|RadioGroup)*><!ATTLIST RelativeLayoutxmlns:android CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT FrameLayout (#PCDATA)><!ATTLIST FrameLayoutandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_weight CDATA #REQUIRED><!ELEMENT RadioGroup (RadioButton)*><!ATTLIST RadioGroupandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:orientation CDATA #REQUIRED><!ELEMENT RadioButton (#PCDATA)><!ATTLIST RadioButtonandroid:id CDATA #REQUIREDandroid:text CDATA #REQUIREDandroid:drawableTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIRED>]>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="yewooo.com.mobileplayer.activity.MainActivity">
+
+    <include layout="@layout/titlebar" ></include>
 
     <FrameLayout
         android:id="@+id/fl_main_content"
@@ -13,6 +16,7 @@
         android:layout_weight="1" ></FrameLayout>
 
     <RadioGroup
+        android:id="@+id/rg_bottom_tag"
         android:padding="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,4 +50,4 @@
 
     </RadioGroup>
 
-</RelativeLayout>
+</LinearLayout>
